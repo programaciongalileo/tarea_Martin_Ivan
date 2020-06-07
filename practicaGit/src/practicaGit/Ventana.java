@@ -44,6 +44,11 @@ public class Ventana extends javax.swing.JFrame {
         lblMensaje.setOpaque(true);
 
         btnDias.setText("Ver dias");
+        btnDias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDiasActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("limpiar label");
 
@@ -82,6 +87,30 @@ public class Ventana extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiasActionPerformed
+        String mesSeleccionado = (String) cmbMeses.getSelectedItem();
+        switch (mesSeleccionado) {
+            case "enero":
+            case "marzo":
+            case "mayo":
+            case "julio":
+            case "agosto":
+            case "octubre":
+            case "diciembre":
+                lblMensaje.setText(mesSeleccionado + " tiene 31 días");
+                break;
+            case "abril":
+            case "junio":
+            case "septiembre":
+            case "noviembre":
+                lblMensaje.setText(mesSeleccionado + " tiene 31 días");
+                break;
+            case "febrero":
+                lblMensaje.setText(mesSeleccionado + " tiene 28 días o 29 días si es bisiesto");
+                break;
+        }
+    }//GEN-LAST:event_btnDiasActionPerformed
 
     /**
      * @param args the command line arguments
