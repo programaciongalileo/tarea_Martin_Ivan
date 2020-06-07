@@ -16,6 +16,13 @@ public class Ventana extends javax.swing.JFrame {
      */
     public Ventana() {
         initComponents();
+        llenarCombo();
+    }
+
+    public void llenarCombo() {
+        for (int mes = 1; mes <= 12; mes++) {
+            cmbMeses.addItem(Year.getNombreMes(mes));
+        }
     }
 
     /**
@@ -44,6 +51,11 @@ public class Ventana extends javax.swing.JFrame {
         lblMensaje.setOpaque(true);
 
         btnDias.setText("Ver dias");
+        btnDias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDiasActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("limpiar label");
 
@@ -82,6 +94,11 @@ public class Ventana extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiasActionPerformed
+        String mesSeleccionado = (String) cmbMeses.getSelectedItem();
+        lblMensaje.setText(mesSeleccionado + " tiene " + Year.getDiasMes(mesSeleccionado) + " días");
+    }//GEN-LAST:event_btnDiasActionPerformed
 
     /**
      * @param args the command line arguments
