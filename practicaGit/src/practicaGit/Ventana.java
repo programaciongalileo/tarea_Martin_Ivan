@@ -58,6 +58,11 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         btnLimpiar.setText("limpiar label");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +104,10 @@ public class Ventana extends javax.swing.JFrame {
         String mesSeleccionado = (String) cmbMeses.getSelectedItem();
         lblMensaje.setText(mesSeleccionado + " tiene " + Year.getDiasMes(mesSeleccionado) + " días");
     }//GEN-LAST:event_btnDiasActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        lblMensaje.setText("");
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
