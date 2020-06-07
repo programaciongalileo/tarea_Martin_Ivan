@@ -27,7 +27,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnDias" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="btnDias" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="btnLimpiar" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="cmbMeses" max="32767" attributes="0"/>
                       <Component id="jLabel1" pref="172" max="32767" attributes="0"/>
@@ -48,7 +52,10 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lblMensaje" min="-2" pref="31" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="btnDias" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnDias" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLimpiar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="103" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -85,6 +92,11 @@
     <Component class="javax.swing.JButton" name="btnDias">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver dias"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnLimpiar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="limpiar label"/>
       </Properties>
     </Component>
   </SubComponents>

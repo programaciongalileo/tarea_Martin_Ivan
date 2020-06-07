@@ -31,6 +31,7 @@ public class Ventana extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         lblMensaje = new javax.swing.JLabel();
         btnDias = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Meses");
@@ -44,6 +45,8 @@ public class Ventana extends javax.swing.JFrame {
 
         btnDias.setText("Ver dias");
 
+        btnLimpiar.setText("limpiar label");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -51,7 +54,10 @@ public class Ventana extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnDias)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnDias)
+                        .addGap(41, 41, 41)
+                        .addComponent(btnLimpiar))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(cmbMeses, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
@@ -68,7 +74,9 @@ public class Ventana extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(btnDias)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDias)
+                    .addComponent(btnLimpiar))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
 
@@ -112,6 +120,7 @@ public class Ventana extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDias;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JComboBox<String> cmbMeses;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblMensaje;
