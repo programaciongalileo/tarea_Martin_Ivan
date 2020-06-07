@@ -16,6 +16,13 @@ public class Ventana extends javax.swing.JFrame {
      */
     public Ventana() {
         initComponents();
+        llenarCombo();
+    }
+
+    public void llenarCombo() {
+        for (int mes = 1; mes <= 12; mes++) {
+            cmbMeses.addItem(Year.getNombreMes(mes));
+        }
     }
 
     /**
@@ -51,6 +58,11 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         btnLimpiar.setText("limpiar label");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,27 +102,12 @@ public class Ventana extends javax.swing.JFrame {
 
     private void btnDiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiasActionPerformed
         String mesSeleccionado = (String) cmbMeses.getSelectedItem();
-        switch (mesSeleccionado) {
-            case "enero":
-            case "marzo":
-            case "mayo":
-            case "julio":
-            case "agosto":
-            case "octubre":
-            case "diciembre":
-                lblMensaje.setText(mesSeleccionado + " tiene 31 días");
-                break;
-            case "abril":
-            case "junio":
-            case "septiembre":
-            case "noviembre":
-                lblMensaje.setText(mesSeleccionado + " tiene 31 días");
-                break;
-            case "febrero":
-                lblMensaje.setText(mesSeleccionado + " tiene 28 días o 29 días si es bisiesto");
-                break;
-        }
+        lblMensaje.setText(mesSeleccionado + " tiene " + Year.getDiasMes(mesSeleccionado) + " dÃ­as");
     }//GEN-LAST:event_btnDiasActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        lblMensaje.setText("");
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
