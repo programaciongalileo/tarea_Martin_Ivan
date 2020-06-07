@@ -95,14 +95,11 @@ public class Ventana extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void btnDiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiasActionPerformed
         String mesSeleccionado = (String) cmbMeses.getSelectedItem();
         lblMensaje.setText(mesSeleccionado + " tiene " + Year.getDiasMes(mesSeleccionado) + " dí­as");
     }//GEN-LAST:event_btnDiasActionPerformed
 
-=======
->>>>>>> ff4bdb126f7921d03f32cf6134eca76e9756545c
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         lblMensaje.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
